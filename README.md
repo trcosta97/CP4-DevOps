@@ -108,7 +108,7 @@ linkdasuaaplicaçãonanuvem/usuario/{id}
 ### Ficha
 Essa é a entidade que representa o ficha.
 #### POST - Cadastrar ficha
-linkdasuaaplicaçãonanuvem/usuario/
+linkdasuaaplicaçãonanuvem/ficha
 ```console
 {
   "autor": {
@@ -122,12 +122,26 @@ linkdasuaaplicaçãonanuvem/usuario/
 }
 ```
 #### UPDATE - Atualizar ficha
-linkdasuaaplicaçãonanuvem/usuario/{id}
+linkdasuaaplicaçãonanuvem/ficha/{id}
 ```console
 {
   "comenatarios": "String"
 }
 ```
+
+### Máquina
+Essa é a entidade que representa a máquina a ser avaliada. Lembrando que só existem 3 setores: MANUFATURA, ACABAMENTO e EMBALAGEM.
+Essa entidade possui apenas as funções Post e Get All, por se tratarem de máquinas fixas que não mudam de setor. Além de por se tratar de uma parte delicada que pode atrapalhar o resto do sistema no caso de mal uso, somente os departamento de TI tem acesso.
+#### POST - Cadastrar máquina
+linkdasuaaplicaçãonanuvem/maquina
+```console
+{
+  "nome": "string",
+  "setor": "MANUFATURA"
+}
+```
+
+
 
 Os métodos de Get e Delete não pedem um corpo na requisição. Você pode utiliza-los individualmente colocando o {id} do alvo como no Update ou realizar a ação em toda a tabela usando o mesmo Url do Post pra cada uma das entidades.
 
