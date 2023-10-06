@@ -1,0 +1,38 @@
+-- Create the Usuario table
+CREATE TABLE usuario (
+    id NUMBER PRIMARY KEY,
+    nome VARCHAR2(255) NOT NULL,
+    login VARCHAR2(255) UNIQUE NOT NULL,
+    senha VARCHAR2(255) NOT NULL,
+    data_cadastro TIMESTAMP NOT NULL,
+    status NUMBER(1, 0) DEFAULT 1 -- Use NUMBER(1, 0) for Boolean-like behavior (1 for true, 0 for false)
+);
+
+-- Create the Maquina table
+CREATE TABLE maquina (
+    id NUMBER PRIMARY KEY,
+    nome VARCHAR2(255) NOT NULL,
+    setor VARCHAR2(255) NOT NULL,
+    status NUMBER(1, 0) DEFAULT 1,
+    data_cadastro TIMESTAMP
+);
+
+-- Create the Ficha table
+CREATE TABLE ficha (
+    id NUMBER PRIMARY KEY,
+    autor_id NUMBER NOT NULL,
+    maquina_id NUMBER NOT NULL,
+    data_criacao TIMESTAMP NOT NULL,
+    comentarios CLOB,
+    aprovado NUMBER(1, 0) DEFAULT 1,
+    ativo NUMBER(1, 0) DEFAULT 1
+);
+
+-- Create sequences for generating IDs (only if they don't already exist)
+CREATE SEQUENCE usuario_seq START WITH 1 INCREMENT BY 1;
+CREATE SEQUENCE maquina_seq START WITH 1 INCREMENT BY 1;
+CREATE SEQUENCE ficha_seq START WITH 1 INCREMENT BY 1;
+
+-- Create foreign key constraints (only if the tables exist)
+ALTER TABLE ficha ADD CONSTRAINT fk_autor FOREIGN KEY (autor_id) REFERENCES usuario(id);
+ALTER TABLE ficha ADD CONSTRAINT fk_maquina FOREIGN KEY (maquina_id) REFERENCES maquina(id);
