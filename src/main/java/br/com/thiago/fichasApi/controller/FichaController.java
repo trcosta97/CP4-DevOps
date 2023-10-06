@@ -19,7 +19,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("ficha")
-@SecurityRequirement(name="bearer-key")
 public class FichaController {
 
     @Autowired
