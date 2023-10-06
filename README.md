@@ -145,7 +145,9 @@ linkdasuaaplicaçãonanuvem/maquina
 
 Os métodos de Get e Delete não pedem um corpo na requisição. Você pode utiliza-los individualmente colocando o {id} do alvo como no Update ou realizar a ação em toda a tabela usando o mesmo Url do Post pra cada uma das entidades.
 
-Com tudo que nós passamos nesse Readme + o código desse repositório você é mais do que capaz de criar seu Azure WebApp direto da IDE Intelijj. Pra outras IDEs o processe é parecido, a única diferença fica na UI de cada uma.
+## Conclusão
+Com tudo que nós passamos nesse Readme + o código desse repositório você é mais do que capaz de criar seu Azure WebApp direto da IDE Intelijj. Pra outras IDEs o processe é parecido, a única diferença fica na UI de cada uma.  
+A partir desse processo, o deploy de uma aplicação na nuvem através do Azure WebApps fica ainda mais rápido e prático, dispensando a necessidade de ir até o portal Azure e fazendo todo o processo direto da IDE.
 
 
 
