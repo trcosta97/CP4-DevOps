@@ -39,7 +39,7 @@ A SKU se refere ao nível de recursos e desempenho de um serviço específico no
 
 Depois de tudo definido e preenchido, basta clicar em **_Run_** e esperar o deploy ser realizado.
 Nós fizemos um passo a passo do processo em vídeo, incluindo a persistência de dados no swagger da nossa API e mostrando os dados persistidos no banco lado a lado:
-https://youtu.be/7YsJhwi-iP0  
+[https://youtu.be/7YsJhwi-iP0](https://youtu.be/7eNPvORBw6c)  
 
 ## Criação da tabelas
 Esse é o DDL das tabelas no SQL. O banco utilizado foi o Oracle.
